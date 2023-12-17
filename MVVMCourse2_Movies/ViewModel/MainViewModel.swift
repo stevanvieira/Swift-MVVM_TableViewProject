@@ -9,6 +9,9 @@ import Foundation
 
 class MainViewModel {
     
+    var isLoading: Observable<Bool> = Observable(false) //default false, because by default its not loading
+    var dataSource: TrendingMovieModel?
+    
     func numberOfSections() -> Int {
         return 1 //for now we will have only one section
     }
@@ -18,7 +21,14 @@ class MainViewModel {
     }
     
     func getData() {
-        APICaller.getTrendingMovies { result in
+        if isLoading.value ?? true {
+            return //if true, we dont want to continue, we want the load to finish first, so we return
+        }
+        
+        isLoading.value = true //isLoading Starts
+        APICaller.getTrendingMovies { [weak self] result in
+            self?.isLoading.value = false //isLoading Finishes
+            
             switch result {
                 case.success(let data):
                     print("Success Message:")

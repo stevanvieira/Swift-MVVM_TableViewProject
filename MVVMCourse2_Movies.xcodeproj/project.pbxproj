@@ -17,6 +17,7 @@
 		F0F0E0E12B2B42B100E776E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E0DF2B2B42B100E776E1 /* LaunchScreen.storyboard */; };
 		F0F0E0EB2B2B520200E776E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E0E92B2B520100E776E1 /* MainViewController.swift */; };
 		F0F0E0EC2B2B520200E776E1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F0E0EA2B2B520100E776E1 /* MainViewController.xib */; };
+		F0F0FA242B2F820E005F73FF /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F0FA232B2F820E005F73FF /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F0F0E0E22B2B42B100E776E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0F0E0E92B2B520100E776E1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F0F0E0EA2B2B520100E776E1 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F0F0FA232B2F820E005F73FF /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 		F0F0E0F12B2B690600E776E1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F0F0FA232B2F820E005F73FF /* Observable.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F0FA242B2F820E005F73FF /* Observable.swift in Sources */,
 				F0F0E0D52B2B42AF00E776E1 /* AppDelegate.swift in Sources */,
 				F002A5632B2DCBFA00DE99F9 /* APICaller.swift in Sources */,
 				F03F602B2B2C734C0024EBF3 /* MainViewController+TableView.swift in Sources */,
