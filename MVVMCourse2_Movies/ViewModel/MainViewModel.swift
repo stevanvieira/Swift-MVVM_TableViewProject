@@ -16,4 +16,17 @@ class MainViewModel {
     func numberOfRows(in section: Int) -> Int {
         return 10 //for now we will have 10 rows
     }
+    
+    func getData() {
+        APICaller.getTrendingMovies { result in
+            switch result {
+                case.success(let data):
+                    print("Success Message:")
+                    print("Top Trending Counts: \(data.results.count)")
+                case.failure(let error):
+                    print("Failure Message:")
+                    print(error)
+            }
+        }
+    }
 }

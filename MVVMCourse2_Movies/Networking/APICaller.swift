@@ -28,6 +28,17 @@ public class APICaller {
                 return
             }
             
-            URLSession.shared.dataTask(with: <#T##URL#>, completionHandler: <#T##(Data?, URLResponse?, Error?) -> Void#>)
+            URLSession.shared.dataTask(with: url) { dataResponse, urlResponse, error in
+                
+                if error == nil,
+                   let jsonData = dataResponse,
+                   let resultData = try? JSONDecoder().decode(TrendingMovieModel.self, from: jsonData) {
+                    completionHandler(.success(resultData))
+                }
+                else {
+                    completionHandler(.failure(.canNotParseData))
+                }
+                
+            }.resume()
     }
 }
